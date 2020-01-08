@@ -13,7 +13,7 @@ public class SelectionSort {
 
     public static void sort(int[] toSortArray) {
 
-        for (int i = 0, len = toSortArray.length; i < len; i ++) {
+        for (int i = 0, len = toSortArray.length; i < len; i++) {
             int min = i;
 
             for (int j = i + 1; j < len; j++) {
@@ -24,7 +24,7 @@ public class SelectionSort {
 
             swap(toSortArray, i, min);
         }
-        
+
     }
 
     private static void swap(int[] toSortArray, int j, int k) {
@@ -39,5 +39,5 @@ public class SelectionSort {
         Arrays.stream(a).forEach(p -> System.out.print(p + " "));
 
     }
-    
+
 }
