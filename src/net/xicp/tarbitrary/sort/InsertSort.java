@@ -3,26 +3,28 @@ package net.xicp.tarbitrary.sort;
 import java.util.Arrays;
 
 /**
- * <p>选择排序</p>
+ * <p>插入排序</p>
  *
  * @author tarbitrary
  * @version V1.0
- * @created_time 2020-01-08 10:07
+ * @created_time 2020-01-10 15:51
  **/
-public class SelectionSort {
-
+public class InsertSort {
     public static void sort(int[] toSortArray) {
 
-        for (int i = 0, len = toSortArray.length; i < len; i++) {
-            int min = i;
+        for (int i = 0, len = toSortArray.length - 1; i < len; i++) {
+            int guard = toSortArray[i + 1];
+            int j = i;
 
-            for (int j = i + 1; j < len; j++) {
-                if (toSortArray[min] > toSortArray[j]) {
-                    min = j;
+            for (; j >= 0; j--) {
+                if (guard >= toSortArray[j]) {
+                    break;
                 }
+
+                toSortArray[j + 1] = toSortArray[j];
             }
 
-            swap(toSortArray, i, min);
+            toSortArray[j + 1] = guard;
         }
 
     }
@@ -45,5 +47,4 @@ public class SelectionSort {
         Arrays.stream(b).forEach(p -> System.out.print(p + " "));
 
     }
-
 }

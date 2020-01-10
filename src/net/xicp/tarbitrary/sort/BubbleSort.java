@@ -30,6 +30,12 @@ public class BubbleSort {
         sort(a);
         Arrays.stream(a).forEach(p -> System.out.print(p + " "));
 
+        System.out.println();
+
+        int[] b =  {10};
+        sort(b);
+        Arrays.stream(b).forEach(p -> System.out.print(p + " "));
+
     }
 
 
