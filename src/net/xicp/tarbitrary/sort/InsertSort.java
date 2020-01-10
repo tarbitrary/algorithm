@@ -42,7 +42,7 @@ public class InsertSort {
 
         System.out.println();
 
-        int[] b =  {10};
+        int[] b = {10};
         sort(b);
         Arrays.stream(b).forEach(p -> System.out.print(p + " "));
 
