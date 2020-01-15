@@ -33,14 +33,14 @@ public class HeapSort {
     private static void heapAdjust(int[] toSortArray, int j, int length) {
 
         int leftChildIndex = (j << 1) + 1;
-        int rightChildInex = leftChildIndex + 1;
+        int rightChildIndex = leftChildIndex + 1;
         int maxIndex = j;
 
         if (leftChildIndex < length && toSortArray[leftChildIndex] > toSortArray[maxIndex]) {
             maxIndex = leftChildIndex;
         }
-        if (rightChildInex < length && toSortArray[rightChildInex] > toSortArray[maxIndex]) {
-            maxIndex = rightChildInex;
+        if (rightChildIndex < length && toSortArray[rightChildIndex] > toSortArray[maxIndex]) {
+            maxIndex = rightChildIndex;
         }
 
         swap(toSortArray, j, maxIndex);
